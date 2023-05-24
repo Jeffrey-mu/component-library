@@ -1,0 +1,15 @@
+.mw {
+  max-width: 1290px;
+  margin: auto;
+}
+*{
+  font-family: "Inter var experimental", " Inter var", Inter, -apple-system, BlinkMacSystemFont, " Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, " Fira Sans", " Droid Sans", " Helvetica Neue", sans-serif;
+}
+.iconfont {
+  font-size: 25px !important;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    opacity: .6;
+  }
+}
