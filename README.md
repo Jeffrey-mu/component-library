@@ -32,7 +32,8 @@ Build the application for production:
 ```bash
 npm run build
 ```
-
+import { Splitpanes, Pane } from 'splitpanes'
+import { Hako } from 'vue-hako'
 Locally preview production build:
 
 ```bash

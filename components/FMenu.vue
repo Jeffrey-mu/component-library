@@ -1,15 +1,9 @@
 <template>
   <div class="f-menu">
     <ul>
-      <li :class="{ active: route.href == item.path }" v-for="item in menu">
-        <a :href="item.path">
-          {{ item.name }}
-        </a>
+      <li :class="{ active: route.query.priview_path == item.name }" v-for="item in menu">
+        <nuxt-link :to="{ path: '/preview', query: { priview_path: item.name } }">{{ item.name }}</nuxt-link>
       </li>
-      <li>
-        菜单
-      </li>
-
     </ul>
   </div>
 </template>
@@ -22,16 +16,8 @@ const menu = [
   },
   {
     path: '/menu',
-    name: '菜单',
+    name: 'menu',
   },
-  {
-    path: './header',
-    name: 'header',
-  },
-  {
-    path: './header',
-    name: 'header',
-  }
 ]
 
 </script>

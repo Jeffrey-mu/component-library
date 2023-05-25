@@ -1,16 +1,18 @@
 <template>
   <div class="app">
-    <FHeader />
+    <FHeader v-show="!istrue"/>
     <div class="content mw">
-      <FMenu />
+      <FMenu v-show="!istrue"/>
       <div class="page">
         <NuxtPage />
       </div>
     </div>
-    <FFooter />
+    <FFooter v-show="!istrue" />
   </div>
 </template>
-
+<script setup>
+const istrue = useRoute().query?.preview
+</script>
 <style lang="scss">
 .app {
   min-height: 100vh;
